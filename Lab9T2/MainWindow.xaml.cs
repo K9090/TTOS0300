@@ -20,21 +20,35 @@ namespace Lab9T2
     /// </summary>
     public partial class MainWindow : Window
     {
-        double markkaEx;
-        double input;
-        double output;
+        private double markkaEx;
+        private double input;
+        private double output;
         
         public MainWindow()
         {
             InitializeComponent();
             markkaEx = 5.94;
-            output = input / markkaEx;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            textBox.Text = "€: " + input;
-            textBox1.Text = "Mk: " + output;
+            convert();
+        }
+
+        private void convert()
+        {
+            if (textBox1.Text == "")
+            {
+                input = Convert.ToDouble(textBox.Text);
+                output = input / markkaEx;
+                textBox1.Text = Convert.ToString(output);
+            }
+            else if (textBox.Text == "")
+            {
+                input = Convert.ToDouble(textBox1.Text);
+                output = input / markkaEx;
+                textBox.Text = Convert.ToString(output);
+            } 
         }
     }
 }

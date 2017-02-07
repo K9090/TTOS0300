@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" FontSize="20">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="31" Margin="61,53,0,0" TextWrapping="Wrap" Text="€..." VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="31" Margin="61,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="button" Content="Convert" HorizontalAlignment="Left" Margin="196,53,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="31" Margin="294,53,0,0" TextWrapping="Wrap" Text="Mk..." VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="31" Margin="294,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="61,21,0,0" TextWrapping="Wrap" Text="Eurot" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="294,26,0,0" TextWrapping="Wrap" Text="Markat" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
