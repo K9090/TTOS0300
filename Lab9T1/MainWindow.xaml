@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" FontSize="50">
     <Grid>
-        <Button x:Name="button" Content="Trucks" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="242" Height="200" Click="button_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="80,215,0,0" TextWrapping="Wrap" Text="###" VerticalAlignment="Top" Height="65" Width="100"/>
-        <Button x:Name="button1" Content="Cars" HorizontalAlignment="Left" Margin="257,10,0,0" VerticalAlignment="Top" Width="250" Height="200" Click="button1_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="335,215,0,0" TextWrapping="Wrap" Text="###" VerticalAlignment="Top" Height="65" Width="100"/>
+        <Button x:Name="button" Content="Trucks" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="245" Height="200" Click="button_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="80,215,0,0" TextWrapping="Wrap" Text="###" VerticalAlignment="Top" Height="65" Width="100" TextAlignment="Center"/>
+        <Button x:Name="button1" Content="Cars" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="245" Height="200" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="335,215,0,0" TextWrapping="Wrap" Text="###" VerticalAlignment="Top" Height="65" Width="100" TextAlignment="Center"/>
 
     </Grid>
 </Window>

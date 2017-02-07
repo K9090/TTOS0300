@@ -20,25 +20,37 @@ namespace Lab9T1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int countTrucks;
-        private int countCars;
+        private int countTrucks = 0;
+        private int countCars = 0;
         public MainWindow()
         {
             InitializeComponent();
-            countTrucks = 0;
-            countCars = 0;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            countTrucks++;
-            textBlock.Text = Convert.ToString(countTrucks);
+            try
+            {
+                countTrucks++;
+                textBlock.Text = Convert.ToString(countTrucks);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            countCars++;
-            textBlock1.Text = Convert.ToString(countCars);
+            try
+            {
+                countCars++;
+                textBlock1.Text = Convert.ToString(countCars);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
