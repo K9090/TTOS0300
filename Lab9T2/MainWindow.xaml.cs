@@ -23,32 +23,76 @@ namespace Lab9T2
         private double markkaEx;
         private double input;
         private double output;
+        int count;
         
         public MainWindow()
         {
             InitializeComponent();
             markkaEx = 5.94;
+            count = 0;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            convert();
+            try
+            {
+                if (count == 0)
+                {
+                    convert();
+                }
+                else if (count == 1)
+                {
+                    reset();
+                }
+                else
+                {
+                    count = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error!");
+            }
         }
 
         private void convert()
         {
-            if (textBox1.Text == "")
+            try
             {
-                input = Convert.ToDouble(textBox.Text);
-                output = input / markkaEx;
-                textBox1.Text = Convert.ToString(output);
+                if (textBox.Text == "")
+                {
+                    input = Convert.ToDouble(textBox1.Text);
+                    output = input * markkaEx;
+                    textBox.Text = Convert.ToString(string.Format("{0:0.00}", output));
+                }
+                else if (textBox1.Text == "")
+                {
+                    input = Convert.ToDouble(textBox.Text);
+                    output = input / markkaEx;
+                    textBox1.Text = Convert.ToString(string.Format("{0:0.00}", output));
+                }
+                button.Content = "Reset?";
+                count++;
             }
-            else if (textBox.Text == "")
+            catch (Exception ex)
             {
-                input = Convert.ToDouble(textBox1.Text);
-                output = input / markkaEx;
-                textBox.Text = Convert.ToString(output);
-            } 
+                MessageBox.Show(ex.Message, "Error!");
+            }
+        }
+
+        private void reset()
+        {
+            try
+            {
+                textBox.Text = "";
+                textBox1.Text = "";
+                button.Content = "Convert";
+                count--;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error!");
+            }
         }
     }
 }
