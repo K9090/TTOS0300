@@ -38,10 +38,12 @@ namespace Lab9T2
             {
                 if (count == 0)
                 {
+                    // Use 'convert' -method if count is 0
                     convert();
                 }
                 else if (count == 1)
                 {
+                    // Use 'reset' -method if count is one
                     reset();
                 }
                 else

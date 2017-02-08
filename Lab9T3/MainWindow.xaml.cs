@@ -37,7 +37,7 @@ namespace Lab9T3
         {
             try
             {
-                if (textBox.Text != "")
+                if (textBox.Text != "") // To prevent input error when clearing a field
                 {
                     length = Convert.ToInt32(textBox.Text);
                 }
@@ -52,7 +52,7 @@ namespace Lab9T3
         {
             try
             {
-                if (textBox1.Text != "")
+                if (textBox1.Text != "") // To prevent input error when clearing a field
                 {
                     height = Convert.ToInt32(textBox1.Text);
                 }
@@ -67,7 +67,7 @@ namespace Lab9T3
         {
             try
             {
-                if (textBox2.Text != "")
+                if (textBox2.Text != "") // To prevent input error when clearing a field
                 {
                     width = Convert.ToInt32(textBox2.Text);
                 }
@@ -86,8 +86,8 @@ namespace Lab9T3
 
             try
             {
-                textBox3.Text = Convert.ToString(windowArea + " cm^2");
-                textBox4.Text = Convert.ToString(glassArea + " cm^2");
+                textBox3.Text = Convert.ToString(windowArea + " cm²");
+                textBox4.Text = Convert.ToString(glassArea + " cm²");
                 textBox5.Text = Convert.ToString(framePerim + " cm");
 
                 textBlock.Text = Convert.ToString("W: " + width);

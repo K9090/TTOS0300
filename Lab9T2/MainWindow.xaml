@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab9T2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" FontSize="20">
+        Title="€uro -muunnin" Height="350" Width="525" FontSize="20">
     <Grid>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="31" Margin="61,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="button" Content="Convert" HorizontalAlignment="Left" Margin="201,53,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
