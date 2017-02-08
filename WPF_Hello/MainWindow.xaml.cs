@@ -27,16 +27,16 @@ namespace WPF_Hello
             count = 0;
         }
         
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void btnSayHello_Click(object sender, RoutedEventArgs e)
         {
-            textBlock.Text = "Hello " + textBox.Text;
-            //MessageBox.Show("Hello " + textBox.Text, "Timo's Mass");
-
+            txbOutput.Text = "Hello " + txtName.Text;
             count++;
-            textBlock1.Text = Convert.ToString(count);
+            txbCounter.Text = Convert.ToString(count);
+            // Notify to status bar
+            txbMessages.Text = "You've pressed the button 'Hello'";
         }
 
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             // Calls About- window into view
             About aboutWin = new About();

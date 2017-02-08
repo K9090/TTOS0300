@@ -20,15 +20,14 @@ namespace Lab9T2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double markkaEx;
-        private double input;
-        private double output;
+        const double markkaEx = 5.94;
+        double input;
+        double output;
         int count;
         
         public MainWindow()
         {
             InitializeComponent();
-            markkaEx = 5.94;
             count = 0;
         }
 

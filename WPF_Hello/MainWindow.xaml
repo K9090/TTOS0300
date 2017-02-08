@@ -13,11 +13,24 @@
                 <GradientStop Color="#FF407187" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" Margin="80,10,0,0" TextWrapping="Wrap" Text="Insert your name" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Say Hello" HorizontalAlignment="Left" Margin="80,75,0,0" VerticalAlignment="Top" Width="120" Click="button_Click" RenderTransformOrigin="0.483,0.323"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="45,256,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="190" Height="50"/>
-        <Button x:Name="button_Copy" Content="About" HorizontalAlignment="Left" Margin="80,111,0,0" VerticalAlignment="Top" Width="120" Click="button_Copy_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="300,173,0,0" TextWrapping="Wrap" Text="##" VerticalAlignment="Top" FontSize="100" IsEnabled="False"/>
-
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBox x:Name="txtName" Height="50" Margin="10" TextWrapping="Wrap" Text="Insert your name" VerticalAlignment="Top" Background="#FFEEEEEE"/>
+                <Button x:Name="btnSayHello" Content="Say Hello" Margin="10" VerticalAlignment="Top" Click="btnSayHello_Click"/>
+                <Button x:Name="btnAbout" Content="About" Margin="10" VerticalAlignment="Top" Click="btnAbout_Click"/>
+                <Button x:Name="btnExit" Content="Exit" Margin="10" VerticalAlignment="Top"/>
+                <TextBlock x:Name="txbOutput" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="190" Height="50"/>
+            </StackPanel>
+            <StackPanel Margin="150,100,0,0">
+                <TextBlock x:Name="txbCounter" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="##" VerticalAlignment="Top" FontSize="100" IsEnabled="False"/>
+            </StackPanel>
+        </StackPanel>
+        <DockPanel VerticalAlignment="Bottom">
+            <StatusBar>
+                <StatusBarItem>
+                    <TextBlock x:Name="txbMessages" FontSize="12"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
     </Grid>
 </Window>

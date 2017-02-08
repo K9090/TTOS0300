@@ -1,0 +1,25 @@
+﻿<Window x:Class="Lab10T2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab10T2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="gridT2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF467C91" Width="200" Height="100">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txbLogin" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbPassword" HorizontalAlignment="Left" Margin="10,6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLogin" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="2,10,-111,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="pswPassword" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="2,6,-109,0" Grid.Row="1" VerticalAlignment="Top" Width="117"/>
+        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="0,3,-61,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
+    </Grid>
+</Window>
