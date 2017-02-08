@@ -30,22 +30,39 @@ namespace Lab10T2
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            login();
+            try
+            {
+                login();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void login()
         {
-            if (txtLogin.Text == exLogin && pswPassword.Password == exPassword)
+            try
             {
-                MessageBox.Show("You managed to login!!! Yippii!!");
+                if (txtLogin.Text == exLogin && pswPassword.Password == exPassword)
+                {
+                    MessageBox.Show("You managed to login!!! Yippii!!");
+                    System.Diagnostics.Debug.WriteLine(txtLogin);
+                    System.Diagnostics.Debug.WriteLine(pswPassword);
+                }
+                else if (txtLogin.Text == exLogin && pswPassword.Password != exPassword)
+                {
+                    MessageBox.Show("Check your password!");
+                }
+                else
+                {
+                    MessageBox.Show("Fuck off, ye ol'cunt!!!");
+                }
             }
-            else if (txtLogin.Text == exLogin && pswPassword.Password != exPassword)
+            catch (Exception ex)
             {
-                MessageBox.Show("Check your password!");
-            }
-            else
-            {
-                MessageBox.Show("Fuck off, ye ol'cunt!!!");
+                MessageBox.Show(ex.Message);
             }
         }
     }
