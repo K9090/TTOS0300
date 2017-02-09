@@ -48,6 +48,9 @@ namespace Lab10T3
     */
     public partial class MainWindow : Window
     {
+        Lottery lotto = new Lottery();
+        List<int> numList = new List<int>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,7 +58,14 @@ namespace Lab10T3
 
         private void btnDraw_Click(object sender, RoutedEventArgs e)
         {
+            lotto.randomize();
+            txbShowRows.Text = "Row 1: ";
 
+            for (int i = 0; i < 7; i++)
+            {
+                numList.Add(lotto.Number);
+                txbShowRows.Text = Convert.ToString(lotto.Number);
+            } 
         }
 
         int _selectedIndex;
@@ -68,7 +78,7 @@ namespace Lab10T3
             Display();
         }
 
-        private void comboBox1_TextChanged(object sender, EventArgs e)
+        private void cmbGameType_TextChanged(object sender, EventArgs e)
         {
             // Called whenever text changes.
             _text = cmbGameType.Text;
@@ -77,9 +87,12 @@ namespace Lab10T3
 
         void Display()
         {
-            this.Text = string.Format("Text: {0}; SelectedIndex: {1}",
-                _text,
-                _selectedIndex);
+            _text = string.Format("Text: {0}; SelectedIndex: {1}", _text, _selectedIndex);
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txbShowRows.Text = "";
         }
     }
 }
