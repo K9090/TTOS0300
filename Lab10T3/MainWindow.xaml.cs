@@ -48,51 +48,145 @@ namespace Lab10T3
     */
     public partial class MainWindow : Window
     {
-        Lottery lotto = new Lottery();
-        List<int> numList = new List<int>();
+        Lotto lotto = new Lotto();
+        VikingLotto vLotto = new VikingLotto();
+        EuroJackpot ePot = new EuroJackpot();
+        EuroJackpotXtra ePotX = new EuroJackpotXtra();
+
+        List<int> lottery = new List<int>();
+        Random rnd = new Random();
+
+        int draws = 0, numOfDraws = 1;
+        string line, allLines;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            cmbGameType.Items.Add("Lotto");
+            cmbGameType.Items.Add("Viking Lotto");
+            cmbGameType.Items.Add("Euro Jackpot");
         }
 
         private void btnDraw_Click(object sender, RoutedEventArgs e)
         {
-            lotto.randomize();
-            txbShowRows.Text = "Row 1: ";
-
-            for (int i = 0; i < 7; i++)
+            Clear();
+            try
             {
-                numList.Add(lotto.Number);
-                txbShowRows.Text = Convert.ToString(lotto.Number);
-            } 
-        }
+                draws = Convert.ToInt32(txtDraws.Text);
 
-        int _selectedIndex;
-        string _text;
+                while (draws >= numOfDraws)
+                {
+                    if (cmbGameType.Text == "Lotto")
+                    {
+                        for (int i = 0; i < lotto.lines; i++)
+                        {
+                            lotto.number = lotto.lottoRand();
+                            if (!lottery.Contains(lotto.number))
+                            {
+                                lottery.Add(lotto.number);
+                            }
+                        }
+                    }
 
-        private void cmbGameType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Called when a new index is selected.
-            _selectedIndex = cmbGameType.SelectedIndex;
-            Display();
-        }
+                    else if (cmbGameType.Text == "Viking Lotto")
+                    {
+                        for (int i = 0; i < vLotto.lines; i++)
+                        {
+                            vLotto.number = vLotto.vikingRand();
+                            if (!lottery.Contains(vLotto.number))
+                            {
+                                lottery.Add(vLotto.number);
+                            }
+                        }
+                    }
 
-        private void cmbGameType_TextChanged(object sender, EventArgs e)
-        {
-            // Called whenever text changes.
-            _text = cmbGameType.Text;
-            Display();
-        }
+                    else if (cmbGameType.Text == "Euro Jackpot")
+                    {
+                        for (int i = 0; i < ePot.lines; i++)
+                        {
+                            ePot.number = ePot.euroRand();
+                            if (!lottery.Contains(ePot.number))
+                            {
+                                lottery.Add(ePot.number);
+                            }
+                        }
+                        for (int i = 0; i < ePotX.lines; i++)
+                        {
+                            ePotX.number = ePotX.euroXtraRand();
+                            if (!lottery.Contains(ePot.number) && !lottery.Contains(ePotX.number))
+                            {
+                                lottery.Add(ePot.number);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        txbShowRows.Text = "Choose a game!";
+                    }
 
-        void Display()
-        {
-            _text = string.Format("Text: {0}; SelectedIndex: {1}", _text, _selectedIndex);
+                    lottery.Sort();
+
+                    line += "Row " + numOfDraws + ":  ";
+                    for (int i = 0; i < lottery.Count; i++)
+                    {
+                        line += lottery[i] + "  ";
+                    }
+                    line += "\n";
+
+                    lottery = new List<int>();
+
+                    numOfDraws++;
+
+                    allLines += line;
+
+                    line = "";
+
+                    for (int i = 0; i < draws; i++)
+                    {
+                        txbShowRows.Text = allLines;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            txbShowRows.Text = "";
+            ClearAll();
+        }
+
+        private void ClearAll()
+        {
+            try
+            {
+                cmbGameType.Text = "";
+                txbShowRows.Text = "";
+                numOfDraws = 1;
+                txtDraws.Text = Convert.ToString(numOfDraws);
+                line = "";
+                allLines = "";
+                lottery = new List<int>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Clear()
+        {
+            try
+            {
+                txbShowRows.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
