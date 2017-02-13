@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab10T2", "Lab10T2\Lab10T2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab10T3", "Lab10T3\Lab10T3.csproj", "{B8B2030D-F2ED-4477-8598-F68019C570E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Binding_Demo", "Data_Binding_Demo\Data_Binding_Demo.csproj", "{37D0AA54-4E2F-4C1B-BFA8-0927FABF9C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Demo_X3", "Wpf_Demo_X3\Wpf_Demo_X3.csproj", "{2E44E942-60B4-48FA-A343-18BAD555778E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{B8B2030D-F2ED-4477-8598-F68019C570E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8B2030D-F2ED-4477-8598-F68019C570E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8B2030D-F2ED-4477-8598-F68019C570E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D0AA54-4E2F-4C1B-BFA8-0927FABF9C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D0AA54-4E2F-4C1B-BFA8-0927FABF9C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D0AA54-4E2F-4C1B-BFA8-0927FABF9C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D0AA54-4E2F-4C1B-BFA8-0927FABF9C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E44E942-60B4-48FA-A343-18BAD555778E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E44E942-60B4-48FA-A343-18BAD555778E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E44E942-60B4-48FA-A343-18BAD555778E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E44E942-60B4-48FA-A343-18BAD555778E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
