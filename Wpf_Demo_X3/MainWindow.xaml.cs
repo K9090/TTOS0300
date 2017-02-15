@@ -101,5 +101,19 @@ namespace Wpf_Demo_X3
             }
 
         }
+
+        private void btnAddTeam_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                joukkueet.Add(new HockeyTeam(txtTeamName.Text, txtTeamCity.Text));
+                txtTeamName.Text = "";
+                txtTeamCity.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
