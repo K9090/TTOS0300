@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab11T3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Employee register" Height="350" Width="600">
+    <Grid Background="LightSteelBlue">
+        <StackPanel HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Stretch" Width="220">
+            <Label x:Name="label1" Content="Employees"/>
+            <ListBox x:Name="lsbEmployee" Height="273" SelectionChanged="lsbEmployee_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Margin="235,10,157,10" VerticalAlignment="Stretch" Width="200">
+            <Label x:Name="label2" Content="Employee info"/>
+            <TextBlock Text="First Name" Margin="5, 5, 5, 0 "></TextBlock>
+            <TextBox x:Name="txtFirstName" Margin="5, 0, 5, 5"></TextBox>
+            <TextBlock Text="Last Name" Margin="5, 5, 5, 0 "></TextBlock>
+            <TextBox x:Name="txtLastName" Margin="5, 0, 5, 5"></TextBox>
+            <TextBlock Text="Employee ID" Margin="5, 5, 5, 0 "></TextBlock>
+            <TextBox x:Name="txtEmplID" Margin="5, 0, 5, 5"></TextBox>
+            <TextBlock Text="Title" Margin="5, 5, 5, 0 "></TextBlock>
+            <TextBox x:Name="txtTitle" Margin="5, 0, 5, 5"></TextBox>
+            <TextBlock Text="Wage" Margin="5, 5, 5, 0 "></TextBlock>
+            <TextBox x:Name="txtWage" Margin="5, 0, 5, 5"></TextBox>
+            <TextBlock Text="Type of employment" Margin="5, 5, 5, 0 "></TextBlock>
+            <Grid Grid.ColumnSpan="2" Grid.RowSpan="1">
+                <CheckBox x:Name="chkFullTime" Margin="10,5,120,5" Content="Full time" Checked="chkFullTime_Checked"/>
+                <CheckBox x:Name="chkPartTime" Margin="85,5,45,5" Content="Part time" Checked="chkPartTime_Checked"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel Margin="440,10,10,10" VerticalAlignment="Stretch">
+            <Label x:Name="label3" Content="Payroll"/>
+            <Button x:Name="btnGetEmployees" Content="Get employees" Margin="5" Click="btnGetEmployees_Click"></Button>
+            <Button x:Name="btnClear" Content="Clear" Margin="5" Click="btnClear_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>

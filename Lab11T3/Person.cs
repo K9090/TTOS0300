@@ -15,7 +15,7 @@ namespace JAMK.IT
 
         public Person()
         {
-
+            
         }
 
         public int CalcAge(int age)
@@ -55,6 +55,7 @@ namespace JAMK.IT
 
     class FullTime : Worker
     {
+        public bool IsFullTime { get; set; }
         public float Salary { get; set; }
 
         public override float CalcWage()
@@ -66,6 +67,7 @@ namespace JAMK.IT
 
     class PartTime : Worker
     {
+        public bool IsPartTime { get; set; }
         public float HourPay { get; set; }
         public int WorkedHours { get; set; }
 
