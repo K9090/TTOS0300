@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace JAMK.IT
 {
-    abstract class Person
+    abstract public class Person
     {
         public string SocialID { get; set; }
         public string FirstName { get; set; }
@@ -15,7 +16,7 @@ namespace JAMK.IT
 
         public Person()
         {
-            
+
         }
 
         public int CalcAge(int age)
@@ -30,7 +31,7 @@ namespace JAMK.IT
         }
     }
 
-    class Worker : Person
+    public class Worker : Person
     {
         public string Title { get; set; }
         public int WorkerID { get; set; }
@@ -53,7 +54,7 @@ namespace JAMK.IT
         }
     }
 
-    class FullTime : Worker
+    public class FullTime : Worker
     {
         public bool IsFullTime { get; set; }
         public float Salary { get; set; }
@@ -65,7 +66,7 @@ namespace JAMK.IT
         }
     }
 
-    class PartTime : Worker
+    public class PartTime : Worker
     {
         public bool IsPartTime { get; set; }
         public float HourPay { get; set; }

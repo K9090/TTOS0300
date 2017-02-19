@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace JAMK.IT
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Worker> workerList;
+        ObservableCollection<Worker> workerList;
         Worker worker1;
         Worker worker2;
         Worker worker3;
@@ -30,7 +31,7 @@ namespace JAMK.IT
         {
             try
             {
-                workerList = new List<Worker>();
+                workerList = new ObservableCollection<Worker>();
 
                 worker1 = new Worker { SocialID = "121256-664G", FirstName = "Taneli", LastName = "Tampio", Title = "CEO", WorkerID = 1, Wage = 5500.00f };
                 worker2 = new Worker { SocialID = "241066-784P", FirstName = "Sirpa", LastName = "Leinen", Title = "Section chief", WorkerID = 2, Wage = 2500.00f };
@@ -109,6 +110,8 @@ namespace JAMK.IT
         {
             try
             {
+                stpCenter.DataContext = workerList;
+
                 if (lsbEmployee.SelectedItem == worker1)
                 {
                     txtFirstName.Text = worker1.FirstName;
