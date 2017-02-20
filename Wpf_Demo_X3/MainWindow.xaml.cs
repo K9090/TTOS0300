@@ -69,10 +69,6 @@ namespace Wpf_Demo_X3
                     counter++;
                     spRight.DataContext = joukkueet[counter];
                 }
-                else
-                {
-
-                }
             }
             catch (Exception ex)
             {
@@ -89,10 +85,6 @@ namespace Wpf_Demo_X3
                 {
                     counter--;
                     spRight.DataContext = joukkueet[counter];
-                }
-                else
-                {
-
                 }
             }
             catch (Exception ex)
