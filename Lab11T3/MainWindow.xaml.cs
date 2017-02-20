@@ -110,9 +110,9 @@ namespace JAMK.IT
         {
             try
             {
-                stpCenter.DataContext = workerList;
+                stpCenter.DataContext = lsbEmployee.SelectedItem;
 
-                if (lsbEmployee.SelectedItem == worker1)
+                /*if (lsbEmployee.SelectedItem == worker1)
                 {
                     txtFirstName.Text = worker1.FirstName;
                     txtLastName.Text = worker1.LastName;
@@ -150,7 +150,7 @@ namespace JAMK.IT
                     txtTitle.Text = worker4.Title;
                     txtWage.Text = Convert.ToString(worker4.Wage);
                     chkPartTime.IsChecked = true;
-                }
+                }*/
             }
             catch (Exception ex)
             {
