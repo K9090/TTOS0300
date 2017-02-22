@@ -24,7 +24,17 @@ namespace MVVMDemo
         public MainWindow()
         {
             InitializeComponent();
+            // Hardcoded test students
             svmo.LoadStudents();
+            // Test students from database
+            try
+            {
+                svmo.LoadStudentsFromMysql();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)

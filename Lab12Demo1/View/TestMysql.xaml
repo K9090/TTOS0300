@@ -1,0 +1,15 @@
+﻿<Window x:Class="MVVMDemo.View.TestMysql"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMDemo.View"
+        mc:Ignorable="d"
+        Title="TestMysql" Height="300" Width="430">
+    <Grid>
+        <DockPanel>
+            <Button x:Name="btnGetData" Content="Get students from MySQL" Click="btnGetData_Click" DockPanel.Dock="Top"></Button>
+            <DataGrid x:Name="dgStudents" ItemsSource="{Binding}"></DataGrid>
+        </DockPanel>
+    </Grid>
+</Window>

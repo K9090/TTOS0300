@@ -1,8 +1,8 @@
-﻿<Application x:Class="Lab12Demo1.App"
+﻿<Application x:Class="MVVMDemo.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Lab12Demo1"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:MVVMDemo"
+             StartupUri="View\TestMysql.xaml">
     <Application.Resources>
          
     </Application.Resources>
