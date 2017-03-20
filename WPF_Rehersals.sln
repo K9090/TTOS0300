@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11T3", "Lab11T3\Lab11T3.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12Demo1", "Lab12Demo1\Lab12Demo1.csproj", "{3098DB97-C742-4AAE-B199-B969E29BF640}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Threads", "Demo_Threads\Demo_Threads.csproj", "{68FCD48F-1F48-40DB-95ED-36FC10CAACFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_VR_Trains", "WPF_VR_Trains\WPF_VR_Trains.csproj", "{5BB7694C-B0BF-45F7-82D6-058926E792F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{3098DB97-C742-4AAE-B199-B969E29BF640}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3098DB97-C742-4AAE-B199-B969E29BF640}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3098DB97-C742-4AAE-B199-B969E29BF640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68FCD48F-1F48-40DB-95ED-36FC10CAACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FCD48F-1F48-40DB-95ED-36FC10CAACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FCD48F-1F48-40DB-95ED-36FC10CAACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FCD48F-1F48-40DB-95ED-36FC10CAACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
