@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_VR_Trains"
         mc:Ignorable="d"
-        Title="VR Trains Client" Height="400" Width="525">
+        Title="VR Trains Client" Height="400" Width="525" SizeToContent="Height" Background="#FF2B2A2A" MinHeight="350" MinWidth="525">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Resources\VR.png" Opacity="0.5" Stretch="Uniform"/>
+            <ImageBrush ImageSource="Resources\VR.png" Opacity="0.5" Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <ComboBox x:Name="cbStations" ItemsSource="{Binding}"  Margin="5"/>
                 <Button x:Name="btnGetTrains" Content="Hae lähtevät junat" Margin="5" Click="btnGetTrains_Click"/>
                 <Image x:Name="imVR" Source="Resources\VR.png" Width="30" Margin="5"/>
-                <TextBlock x:Name="tbMessage" Text="..." FontSize="14" Margin="5"/>
+                <TextBlock x:Name="tbMessage" Text="..." FontSize="14" Margin="5" Foreground="#FFE6E6E6"/>
             </StackPanel>
-            <DataGrid x:Name="dgTrains"  Margin="10,10,10,0" VerticalAlignment="Top" ItemsSource="{Binding}"/>
+            <DataGrid x:Name="dgTrains"  Margin="10,10,10,0" VerticalAlignment="Top" ItemsSource="{Binding}" Opacity="0.7"/>
         </StackPanel>
     </Grid>
 </Window>

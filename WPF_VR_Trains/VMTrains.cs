@@ -17,7 +17,7 @@ namespace JAMK.IT
                 if (station == "testi" || station == "")
                 {
                     //Vaihe1: Placebo palauttaa oikean muotoista dataa
-                    //keksitään muutama juna
+                    //keksitään koejuna
                     Train tr = new Train();
                     tr.TrainNumber = "666";
                     tr.DepDate = new DateTime(2017, 3, 21);

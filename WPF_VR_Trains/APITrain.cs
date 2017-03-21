@@ -14,7 +14,7 @@ namespace JAMK.IT
             try
             {
                 string url = "";
-                url = @"https://rata.digitraffic.fi/api/v1/live-trains?station=" + filter;
+                    url = @"https://rata.digitraffic.fi/api/v1/live-trains?station=" + filter;
                 using (WebClient wc = new WebClient())
                 {
                     string json = wc.DownloadString(url);
