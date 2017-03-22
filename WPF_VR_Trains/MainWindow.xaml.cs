@@ -45,7 +45,8 @@ namespace WPF_VR_Trains
                 stations.Add(new Station("HKI", "Helsinki"));
                 stations.Add(new Station("TPE", "Tampere"));
                 //TODO hae asemapaikat APIn json:sta
-                //kiinnitetään staions -kokoelma comboboxiin
+
+                //kiinnitetään stations -kokoelma comboboxiin
                 cbStations.DisplayMemberPath = "Name";
                 cbStations.SelectedValuePath = "Code";
                 cbStations.DataContext = stations;
@@ -99,7 +100,7 @@ namespace WPF_VR_Trains
                 //V2: asynkroninen omassa säikeessä
                 selectedStation = cbStations.SelectedValue.ToString();
                 new Thread(GetTrainsAtAsync).Start();
-                tbMessage.Text = "haetaan junia, odata hetki...";
+                tbMessage.Text = "haetaan junia, odota hetki...";
             }
         }
     }
