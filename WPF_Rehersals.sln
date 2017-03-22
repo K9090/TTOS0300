@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Threads", "Demo_Thread
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_VR_Trains", "WPF_VR_Trains\WPF_VR_Trains.csproj", "{5BB7694C-B0BF-45F7-82D6-058926E792F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeWPF", "SnakeWPF\SnakeWPF.csproj", "{65E9DF2D-BF73-4F54-AA7F-07FECA6D4A32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB7694C-B0BF-45F7-82D6-058926E792F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E9DF2D-BF73-4F54-AA7F-07FECA6D4A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E9DF2D-BF73-4F54-AA7F-07FECA6D4A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E9DF2D-BF73-4F54-AA7F-07FECA6D4A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E9DF2D-BF73-4F54-AA7F-07FECA6D4A32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
