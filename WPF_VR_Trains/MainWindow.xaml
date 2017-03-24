@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_VR_Trains"
         mc:Ignorable="d"
-        Title="VR Trains Client" Height="400" Width="525" SizeToContent="Height" Background="#FF2B2A2A" MinHeight="350" MinWidth="525">
+        Title="VR Trains Client" Height="400" Width="525" SizeToContent="Height" Background="#FF2B2A2A" MinHeight="350" MinWidth="525" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Resources\VR.png" Opacity="0.5" Stretch="UniformToFill"/>
